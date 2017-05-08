@@ -22,7 +22,7 @@ var parser = function(domparser) {
             var tag = chapterTags[i];
 
             // skip markers that are not chapters
-            if (tag.getAttribute('Type').toLowerCase() !== 'chapter') {
+            if (!tag.getAttribute('Type') || tag.getAttribute('Type').toLowerCase() !== 'chapter') {
                 continue;
             }
 

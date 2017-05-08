@@ -48,5 +48,12 @@ describe('hindenburg', function() {
 			], hindenburg.parse(wrap('<Marker Id="1" Name="Intro" Time="1.200" Type="Chapter"/><Marker Id="2" Name="Second" Time="2.400" Type="Chapter"/>')));
 		});
 
+        it('should handle markers without type', function () {
+            assert.deepEqual([
+                { start: 19600, title: "Marker 4" },
+                { start: 44200, title: "Marker 5" }
+            ], hindenburg.parse(wrap('<Marker Id="3" Name="Marker 3" Time="40.400"/><Marker Id="4" Name="Marker 4" Time="19.600" Type="Chapter"/><Marker Id="5" Name="Marker 5" Time="44.200" Type="Chapter"/>')));
+        })
+
 	});
 });
