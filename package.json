@@ -1,6 +1,6 @@
 {
   "name": "podcast-chapter-parser-hindenburg",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Parse chapters from Hindenburg project files into JSON",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,10 @@
   "author": "ericteubert <eric@ericteubert.de>",
   "license": "MIT",
   "dependencies": {
-    "mocha": "^3.2.0",
     "normalplaytime": "^1.0.6",
     "xmldom": "^0.1.27"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
   }
 }
