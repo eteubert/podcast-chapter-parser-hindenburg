@@ -1,4 +1,4 @@
-var DOMParser = require('xmldom').DOMParser;
+const { DOMParser, XMLSerializer } = require('@xmldom/xmldom')
 var assert = require("assert");
 var hindenburg = require('../index.js').parser(DOMParser);
 
