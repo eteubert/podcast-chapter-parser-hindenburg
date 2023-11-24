@@ -43,6 +43,9 @@ var parser = function(domparser) {
                 chapters.push(chapter);
             }
         }
+        chapters.sort(function(chapterA, chapterB) {
+           return chapterA.start - chapterB.start;
+        });
 
         return chapters;
 
