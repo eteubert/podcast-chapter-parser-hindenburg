@@ -1,6 +1,6 @@
 {
   "name": "podcast-chapter-parser-hindenburg",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Parse chapters from Hindenburg project files into JSON",
   "main": "index.js",
   "scripts": {
