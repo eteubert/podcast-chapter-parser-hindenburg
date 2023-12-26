@@ -54,6 +54,12 @@ describe('hindenburg', function() {
                 { start: 44200, title: "Marker 5" }
             ], hindenburg.parse(wrap('<Marker Id="3" Name="Marker 3" Time="40.400"/><Marker Id="4" Name="Marker 4" Time="19.600" Type="Chapter"/><Marker Id="5" Name="Marker 5" Time="44.200" Type="Chapter"/>')));
         })
-
+		it('should read and order shuffled chapters', function () {
+			assert.deepEqual([
+				{ start: 0, title: "Marker 1" },
+				{ start: 16775, title: "Marker 2" },
+				{ start: 176334, title: "Marker 3" }
+			], hindenburg.parse(wrap('  <Marker Id="4" Name="Marker 2" Time="16.775" Type="Chapter"/><Marker Id="3" Name="Marker 1" Time="00.000" Type="Chapter"/><Marker Id="5" Name="Marker 3" Time="02:56.334" Type="Chapter"/>')))
+		});
 	});
 });
